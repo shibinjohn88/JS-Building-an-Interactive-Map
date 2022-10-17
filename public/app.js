@@ -30,18 +30,24 @@ let polygon = L.polygon(
     [48.86933262048345, 2.3542531602919805],
     [48.87199261164275, 2.3400569901592183],
     [48.86993336274516, 2.3280142476578813], 
-    [48.86834104280146, 2.330308418109664]]
+    [48.86834104280146, 2.330308418109664]],{color: "blue", fill: "false"}
 ).addTo(myMap);
                                          
 
 // create red pin marker
+var redpin = L.icon({
+    iconUrl: 'assets/red-pin.png',
+    iconSize: [38, 38],
+    iconAnchor: [19, 38],
+    
+});
 
 // const rS = L.marker([48.866200610611926, 2.352236247419453]).bindPopup('RÃ©aumur-SÃ©bastopol')
 
 
 
 // metro station markers
-const rS = L.marker([48.866200610611926, 2.352236247419453]).bindPopup('RÃ©aumur-SÃ©bastopol')
+const rS = L.marker([48.866200610611926, 2.352236247419453], {icon: redpin}).bindPopup('RÃ©aumur-SÃ©bastopol')
 const sSD = L.marker([48.869531786321566, 2.3528590208055196]).bindPopup('Strasbourg-Saint-Denis')
 const sentier = L.marker([48.8673721067762, 2.347107922912739]).bindPopup('Sentier')
 const bourse = L.marker([48.86868503971672, 2.3412285142058167]).bindPopup('Bourse')
